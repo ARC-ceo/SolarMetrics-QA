@@ -61,34 +61,14 @@ Os dados gerados serão utilizados durante diversos cenários descritos no plano
 
 Link do Board:
 
-> 🔗 Inserir link do Azure Boards aqui
-
----
-
-## Azure Test Plans
-
-Link do Plano de Testes:
-
-> 🔗 Inserir link do Azure Test Plans aqui
-
----
-
-## Evidências
-
-Local para consulta das evidências de execução:
-
-> 🔗 Inserir link das evidências aqui
+> 🔗 [SolarMetrics Azure](https://dev.azure.com/Challenge-SolarMetrics/SolarMetrics)
 
 ---
 
 # Estrutura do Repositório
 
 ```text
-📦 QA-Tests
- ┣ 📂 Collection
- ┃ ┗ 📄 Insomnia_Collection.json
- ┣ 📂 Plano-Testes
- ┃ ┗ 📄 Plano_de_Testes.pdf
- ┣ 📂 Evidencias
- ┃ ┗ 📄 Screenshots e Resultados
+📦 SolarMetrics-QA
+ ┣ 📄 Plano_de_Testes_SolarMetrics.pdf
+ ┣ 📄 CTs - Collection Insomnia.yaml
  ┗ 📄 README.md
