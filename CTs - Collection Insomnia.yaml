@@ -1,0 +1,890 @@
+type: collection.insomnia.rest/5.0
+name: Challenge SM QA - Azure WebApp
+meta:
+  id: wrk_2b71418b52fe435daffbe58c19f9e7d7
+  created: 1779550086326
+  modified: 1779555470929
+collection:
+  - name: Cliente
+    meta:
+      id: fld_2cf02213cca849b383754e23b49914d6
+      created: 1779550086331
+      modified: 1779550086331
+      sortKey: -1759000022685
+    children:
+      - url: https://solarmetrics-api.azurewebsites.net/cliente
+        name: Create
+        meta:
+          id: req_7fa51b8e4ec9496e9f33ef7bf2885034
+          created: 1779550086332
+          modified: 1779550633442
+          isPrivate: false
+          sortKey: -1759000026855
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"email": "carlossantiagoclementino36@gmail.com",
+            	"nome": "Carlos Clementino",
+            	"telefone": "11972935394",
+            	"tipoUsuario": "Residencial"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+            id: pair_a5d4aa000e914089a17a6ff48e73f4d4
+          - name: User-Agent
+            value: insomnia/11.1.0
+            id: pair_584db9e9d2e245bbbd20caddcc31e7e3
+          - id: pair_a4512557a04a4354a9a680044d61ba55
+            name: Authorization
+            value: Bearer {% response 'body', 'req_47d6903560024482be79db1a9c31ba6a',
+              'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'when-expired', 60 %}
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://solarmetrics-api.azurewebsites.net/cliente
+        name: Update
+        meta:
+          id: req_e9a89770de094dbdac027bded7517e03
+          created: 1779550086333
+          modified: 1779550689995
+          isPrivate: false
+          sortKey: -1759000026955
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"id": "741890a9-f46b-4d20-8b59-5290188b0760",
+            	"email": "carlos21@gmail.com",
+            	"nome": "Carlos Clementino",
+            	"telefone": "11972935394",
+            	"tipoUsuario": "Residencial"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+            id: pair_474c8413f046481ba30f0536598129e3
+          - name: User-Agent
+            value: insomnia/11.1.0
+            id: pair_d1a5eaaba0664b38bfb4a0730abed8f2
+          - id: pair_9ffc733f1a41482d836fc835868ac428
+            name: Authorization
+            value: Bearer {% response 'body', 'req_47d6903560024482be79db1a9c31ba6a',
+              'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'when-expired', 60 %}
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://solarmetrics-api.azurewebsites.net/cliente/741890a9-f46b-4d20-8b59-5290188b0760
+        name: Get
+        meta:
+          id: req_2ded89b376b94ddab547acfc27e137dc
+          created: 1779550086335
+          modified: 1779550627551
+          isPrivate: false
+          sortKey: -1759000027055
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+            id: pair_8714e55618f64b11bac4c711aa4f813a
+          - id: pair_f4014143b19b4aa198102258defab991
+            name: Authorization
+            value: Bearer {% response 'body', 'req_47d6903560024482be79db1a9c31ba6a',
+              'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'when-expired', 60 %}
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://solarmetrics-api.azurewebsites.net/cliente/741890a9-f46b-4d20-8b59-5290188b0760
+        name: Delete
+        meta:
+          id: req_47b2b548d5ef416bbe77ab0d0072cb53
+          created: 1779550086336
+          modified: 1779550732698
+          isPrivate: false
+          sortKey: -1759000027155
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+            id: pair_3c0da492461a45a8acda3c1318c1efa9
+          - id: pair_75ad36b678c34d588e9f893224b073e3
+            name: Authorization
+            value: Bearer {% response 'body', 'req_47d6903560024482be79db1a9c31ba6a',
+              'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'when-expired', 60 %}
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://solarmetrics-api.azurewebsites.net/cliente
+        name: Get All
+        meta:
+          id: req_6b64ff4dddc54ba18a9ba0a55cff6c01
+          created: 1779550086338
+          modified: 1779550804786
+          isPrivate: false
+          sortKey: -1759000027355
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+            id: pair_33df632cda804139a8662b41c1b69541
+          - id: pair_752e1acb345944f0ab422ff0f78ca21c
+            name: Authorization
+            value: Bearer {% response 'body', 'req_47d6903560024482be79db1a9c31ba6a',
+              'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'when-expired', 60 %}
+            disabled: false
+        authentication:
+          type: none
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Sistema
+    meta:
+      id: fld_47f55bac816448da965b3e4c62c04f57
+      created: 1779550086339
+      modified: 1779550086339
+      sortKey: -1760507930928
+    children:
+      - name: POST /sistema
+        meta:
+          id: fld_f6b04109535a405689ddff4a68a30c9a
+          created: 1779553901917
+          modified: 1779553972356
+          sortKey: -1779553966457
+        children:
+          - url: https://solarmetrics-api.azurewebsites.net/sistema
+            name: "CT-01 Positivo: Criar sistema válido"
+            meta:
+              id: req_6b219d56c03045479537b20773c02cb2
+              created: 1779550086347
+              modified: 1779554062528
+              isPrivate: false
+              sortKey: -1779553915547
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                  "nomeInstalacao": "Casa de Ribeirão Preto",
+                  "dataInstalacao": "2026-03-21",
+                  "potenciaTotal": 3000,
+                  "status": "ATIVO",
+                  "clienteId": "d19de995-d449-46ea-8586-7956a669bd93"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+                id: pair_a2e8d28de8d34fb4aa8d12e44e2f8c65
+              - name: User-Agent
+                value: insomnia/11.1.0
+                id: pair_3efc4cd27fe14e1992cd222dac0d0da2
+              - id: pair_d5ceb73025b64f098ab53e0aff147389
+                name: Authorization
+                value: Bearer {% response 'body', 'req_47d6903560024482be79db1a9c31ba6a',
+                  'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'when-expired', 60 %}
+                disabled: false
+              - id: pair_9caa5d3ba3994917ac8f8613c3803258
+                disabled: false
+            authentication:
+              type: none
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: https://solarmetrics-api.azurewebsites.net/sistema
+            name: "CT-02 Exceção: Sem JWT"
+            meta:
+              id: req_181b7431d4c742678118309b33cfe673
+              created: 1779553750404
+              modified: 1779553931922
+              isPrivate: false
+              sortKey: -1779553915497
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                  "nomeInstalacao": "Casa de Ribeirão Preto",
+                  "dataInstalacao": "2026-03-21",
+                  "potenciaTotal": 3000,
+                  "status": "ATIVO",
+                  "clienteId": "d19de995-d449-46ea-8586-7956a669bd93"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+                id: pair_a2e8d28de8d34fb4aa8d12e44e2f8c65
+              - name: User-Agent
+                value: insomnia/11.1.0
+                id: pair_3efc4cd27fe14e1992cd222dac0d0da2
+            authentication:
+              type: none
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: https://solarmetrics-api.azurewebsites.net/sistema
+            name: "CT-03 Exceção: Cliente inexistente"
+            meta:
+              id: req_24b8e11851624d80a99cf0e400484676
+              created: 1779553864447
+              modified: 1779553925886
+              isPrivate: false
+              sortKey: -1779553915447
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                  "nomeInstalacao": "Casa de Ribeirão Preto",
+                  "dataInstalacao": "2026-03-21",
+                  "potenciaTotal": 3000,
+                  "status": "ATIVO",
+                  "clienteId": "d19de995-d449-46ea-8586-7956a669bd53"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+                id: pair_a2e8d28de8d34fb4aa8d12e44e2f8c65
+              - name: User-Agent
+                value: insomnia/11.1.0
+                id: pair_3efc4cd27fe14e1992cd222dac0d0da2
+              - id: pair_d5ceb73025b64f098ab53e0aff147389
+                name: Authorization
+                value: Bearer {% response 'body', 'req_47d6903560024482be79db1a9c31ba6a',
+                  'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'when-expired', 60 %}
+                disabled: false
+              - id: pair_9caa5d3ba3994917ac8f8613c3803258
+                disabled: false
+            authentication:
+              type: none
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: https://solarmetrics-api.azurewebsites.net/sistema
+            name: "CT-04 Exceção: Campos obrigatórios ausentes"
+            meta:
+              id: req_dc2b7019219848138a7a6e33761d5043
+              created: 1779554119609
+              modified: 1779554142113
+              isPrivate: false
+              sortKey: -1779267425037
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                  "potenciaTotal": 3000
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+                id: pair_a2e8d28de8d34fb4aa8d12e44e2f8c65
+              - name: User-Agent
+                value: insomnia/11.1.0
+                id: pair_3efc4cd27fe14e1992cd222dac0d0da2
+              - id: pair_d5ceb73025b64f098ab53e0aff147389
+                name: Authorization
+                value: Bearer {% response 'body', 'req_47d6903560024482be79db1a9c31ba6a',
+                  'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'when-expired', 60 %}
+                disabled: false
+              - id: pair_9caa5d3ba3994917ac8f8613c3803258
+                disabled: false
+            authentication:
+              type: none
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: PUT /sistema
+        meta:
+          id: fld_fe2e5bef5db846e0ac8ea55e22cb1fdb
+          created: 1779553966357
+          modified: 1779553966357
+          sortKey: -1779553966357
+        children:
+          - url: https://solarmetrics-api.azurewebsites.net/sistema
+            name: "CT-05 Positivo: Atualizar sistema"
+            meta:
+              id: req_d21d95d19c584283bfc420801150dee7
+              created: 1779550086346
+              modified: 1779554244990
+              isPrivate: false
+              sortKey: -1779553986373
+            method: PUT
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                  "id": "895fd2cd-dd5a-46e5-a0d4-c852d573d0cf",
+                  "nomeInstalacao": "Casa Campo",
+                  "dataInstalacao": "2025-11-09",
+                  "potenciaTotal": 122,
+                  "status": "INATIVO",
+                  "clienteId": "d19de995-d449-46ea-8586-7956a669bd93"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+                id: pair_283f726e342443c6a0d1251b00715d5b
+              - name: User-Agent
+                value: insomnia/11.1.0
+                id: pair_91bf511d06ac40f1aeee7cdd09b07c83
+              - id: pair_a000a88bb9444eb598908c5e7c310df9
+                name: Authorization
+                value: Bearer {% response 'body', 'req_47d6903560024482be79db1a9c31ba6a',
+                  'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'when-expired', 60 %}
+                disabled: false
+            authentication:
+              type: none
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: https://solarmetrics-api.azurewebsites.net/sistema
+            name: "CT-06 Exceção: Sistema inexistente"
+            meta:
+              id: req_5eed20b61c0c4ed184b938987f55731b
+              created: 1779554229029
+              modified: 1779554273711
+              isPrivate: false
+              sortKey: -1779553950960
+            method: PUT
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                  "id": "895fd2cd-dd5a-46e5-a0d4-c852d576d0cf",
+                  "nomeInstalacao": "Casa Campo",
+                  "dataInstalacao": "2025-11-09",
+                  "potenciaTotal": 122,
+                  "status": "INATIVO",
+                  "clienteId": "d19de995-d449-46ea-8586-7956a669bd93"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+                id: pair_283f726e342443c6a0d1251b00715d5b
+              - name: User-Agent
+                value: insomnia/11.1.0
+                id: pair_91bf511d06ac40f1aeee7cdd09b07c83
+              - id: pair_a000a88bb9444eb598908c5e7c310df9
+                name: Authorization
+                value: Bearer {% response 'body', 'req_47d6903560024482be79db1a9c31ba6a',
+                  'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'when-expired', 60 %}
+                disabled: false
+            authentication:
+              type: none
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: https://solarmetrics-api.azurewebsites.net/sistema
+            name: "CT-07 Exceção: Cliente inexistente"
+            meta:
+              id: req_e0a84e67953043a3b354dbb957d98493
+              created: 1779554363489
+              modified: 1779554416963
+              isPrivate: false
+              sortKey: -1779553933253.5
+            method: PUT
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                  "id": "895fd2cd-dd5a-46e5-a0d4-c852d573d0cf",
+                  "nomeInstalacao": "Casa Campo",
+                  "dataInstalacao": "2025-11-09",
+                  "potenciaTotal": 122,
+                  "status": "INATIVO",
+                  "clienteId": "d19de995-d549-46ea-8586-7956a669bd93"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+                id: pair_283f726e342443c6a0d1251b00715d5b
+              - name: User-Agent
+                value: insomnia/11.1.0
+                id: pair_91bf511d06ac40f1aeee7cdd09b07c83
+              - id: pair_a000a88bb9444eb598908c5e7c310df9
+                name: Authorization
+                value: Bearer {% response 'body', 'req_47d6903560024482be79db1a9c31ba6a',
+                  'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'when-expired', 60 %}
+                disabled: false
+            authentication:
+              type: none
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: https://solarmetrics-api.azurewebsites.net/sistema
+            name: "CT-08 Exceção: Sem JWT "
+            meta:
+              id: req_6337adbb618947d18c11e01677afb6d8
+              created: 1779554441411
+              modified: 1779554450641
+              isPrivate: false
+              sortKey: -1779553933153.5
+            method: PUT
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                  "id": "895fd2cd-dd5a-46e5-a0d4-c852d573d0cf",
+                  "nomeInstalacao": "Casa Campo",
+                  "dataInstalacao": "2025-11-09",
+                  "potenciaTotal": 122,
+                  "status": "INATIVO",
+                  "clienteId": "d19de995-d449-46ea-8586-7956a669bd93"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+                id: pair_283f726e342443c6a0d1251b00715d5b
+              - name: User-Agent
+                value: insomnia/11.1.0
+                id: pair_91bf511d06ac40f1aeee7cdd09b07c83
+            authentication:
+              type: none
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: GET /sistema/{id}
+        meta:
+          id: fld_d41871bd661a4fe9804ebd783b0d079e
+          created: 1779554480078
+          modified: 1779554498752
+          sortKey: -1771140150550.5
+        children:
+          - url: https://solarmetrics-api.azurewebsites.net/sistema/895fd2cd-dd5a-46e5-a0d4-c852d573d0cf
+            name: "CT-09 Positivo: Buscar sistema"
+            meta:
+              id: req_a3686f4a74c442fc94a975d1f8971770
+              created: 1779550086343
+              modified: 1779554542297
+              isPrivate: false
+              sortKey: -1779554517621
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.1.0
+                id: pair_4dc76b857cbc4ad69c84a5dbd24810cb
+              - id: pair_0810b99d93974dccac9517f66d9fd91a
+                name: Authorization
+                value: Bearer {% response 'body', 'req_47d6903560024482be79db1a9c31ba6a',
+                  'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'when-expired', 60 %}
+                disabled: false
+            authentication:
+              type: none
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: https://solarmetrics-api.azurewebsites.net/sistema/795fd2cd-dd5a-46e5-a0d4-c852d573d0cf
+            name: "CT-10 Exceção: Sistema inexistente"
+            meta:
+              id: req_26874ffffb474136ae26b42c479e38da
+              created: 1779554569155
+              modified: 1779554610053
+              isPrivate: false
+              sortKey: -1779554251997
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.1.0
+                id: pair_4dc76b857cbc4ad69c84a5dbd24810cb
+              - id: pair_0810b99d93974dccac9517f66d9fd91a
+                name: Authorization
+                value: Bearer {% response 'body', 'req_47d6903560024482be79db1a9c31ba6a',
+                  'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'when-expired', 60 %}
+                disabled: false
+            authentication:
+              type: none
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: https://solarmetrics-api.azurewebsites.net/sistema/795fd2cd-dd5a-46e5-a0d4-c852d573dscf
+            name: "CT-11 Exceção: UUID inválido"
+            meta:
+              id: req_47d0a47e16f04ce4bbcda3739917eb94
+              created: 1779554646197
+              modified: 1779554689100
+              isPrivate: false
+              sortKey: -1779554119185
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.1.0
+                id: pair_4dc76b857cbc4ad69c84a5dbd24810cb
+              - id: pair_0810b99d93974dccac9517f66d9fd91a
+                name: Authorization
+                value: Bearer {% response 'body', 'req_47d6903560024482be79db1a9c31ba6a',
+                  'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'when-expired', 60 %}
+                disabled: false
+            authentication:
+              type: none
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: https://solarmetrics-api.azurewebsites.net/sistema/895fd2cd-dd5a-46e5-a0d4-c852d573d0cf
+            name: "CT-12 Exceção: Sem JWT"
+            meta:
+              id: req_3f14012857a743a18da749f5609174ea
+              created: 1779554777118
+              modified: 1779554792042
+              isPrivate: false
+              sortKey: -1779554119085
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.1.0
+                id: pair_4dc76b857cbc4ad69c84a5dbd24810cb
+            authentication:
+              type: none
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: DELETE /sistema/{id}
+        meta:
+          id: fld_15c20b12d3164af895a6e884de820a0d
+          created: 1779554810203
+          modified: 1779554820032
+          sortKey: -1766933242647.25
+        children:
+          - url: https://solarmetrics-api.azurewebsites.net/sistema/895fd2cd-dd5a-46e5-a0d4-c852d573d0cf
+            name: "CT-13 Positivo: Excluir sistema"
+            meta:
+              id: req_be8e00975d384b49912dd79f5906b63d
+              created: 1779550086348
+              modified: 1779554933844
+              isPrivate: false
+              sortKey: -1779554895100
+            method: DELETE
+            headers:
+              - name: User-Agent
+                value: insomnia/11.1.0
+                id: pair_6fe5dc1f34014e0dbbfd1fac8015e1c7
+              - id: pair_d5c84069b5a6469eb82fadc5fef9f016
+                name: Authorization
+                value: Bearer {% response 'body', 'req_47d6903560024482be79db1a9c31ba6a',
+                  'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'when-expired', 60 %}
+                disabled: false
+            authentication:
+              type: none
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: https://solarmetrics-api.azurewebsites.net/sistema/995fd2cd-dd5a-46e5-a0d4-c852d573d0cf
+            name: "CT-14 Exceção: Sistema inexistente"
+            meta:
+              id: req_454de7bb6cc94d6198e0697fb0ae5457
+              created: 1779554949651
+              modified: 1779554959977
+              isPrivate: false
+              sortKey: -1779554706360.5
+            method: DELETE
+            headers:
+              - name: User-Agent
+                value: insomnia/11.1.0
+                id: pair_6fe5dc1f34014e0dbbfd1fac8015e1c7
+              - id: pair_d5c84069b5a6469eb82fadc5fef9f016
+                name: Authorization
+                value: Bearer {% response 'body', 'req_47d6903560024482be79db1a9c31ba6a',
+                  'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'when-expired', 60 %}
+                disabled: false
+            authentication:
+              type: none
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: https://solarmetrics-api.azurewebsites.net/sistema/r95fd2cd-dd5a-46e5-a0d4-c852d573d0cf
+            name: "CT-15 Exceção: UUID inválido"
+            meta:
+              id: req_6e24a8c8ddd04ed3bc4dcb4bff0e236d
+              created: 1779554977636
+              modified: 1779554984488
+              isPrivate: false
+              sortKey: -1779554611990.75
+            method: DELETE
+            headers:
+              - name: User-Agent
+                value: insomnia/11.1.0
+                id: pair_6fe5dc1f34014e0dbbfd1fac8015e1c7
+              - id: pair_d5c84069b5a6469eb82fadc5fef9f016
+                name: Authorization
+                value: Bearer {% response 'body', 'req_47d6903560024482be79db1a9c31ba6a',
+                  'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'when-expired', 60 %}
+                disabled: false
+            authentication:
+              type: none
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: https://solarmetrics-api.azurewebsites.net/sistema/895fd2cd-dd5a-46e5-a0d4-c852d573d0cf
+            name: "CT-16 Exceção: Sem JWT"
+            meta:
+              id: req_7343f6e8e02540299d45edf3b0f94867
+              created: 1779555045565
+              modified: 1779555062816
+              isPrivate: false
+              sortKey: -1779554611890.75
+            method: DELETE
+            headers:
+              - name: User-Agent
+                value: insomnia/11.1.0
+                id: pair_6fe5dc1f34014e0dbbfd1fac8015e1c7
+            authentication:
+              type: none
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: GET /sistema
+        meta:
+          id: fld_63d307fdaa324976aa60c247563d6e49
+          created: 1779555100809
+          modified: 1779555108202
+          sortKey: -1764829722540.625
+        children:
+          - url: https://solarmetrics-api.azurewebsites.net/sistema
+            name: "CT-17 Positivo: Listar sistemas"
+            meta:
+              id: req_8f685ac943a644ff962deaab69b9dd71
+              created: 1779550086342
+              modified: 1779555134163
+              isPrivate: false
+              sortKey: -1779555119724
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.1.0
+                id: pair_25fab6d71a2c43b9be1b759eb32c8728
+              - id: pair_e3229597e7234dc4a1f75a6bf404aa0b
+                name: Authorization
+                value: Bearer {% response 'body', 'req_47d6903560024482be79db1a9c31ba6a',
+                  'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'when-expired', 60 %}
+                disabled: false
+            authentication:
+              type: none
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: https://solarmetrics-api.azurewebsites.net/sistema
+            name: "CT-18 Exceção: Sem JWT"
+            meta:
+              id: req_a97f0ac0f768475b99ef83dedc2cb482
+              created: 1779555184837
+              modified: 1779555229244
+              isPrivate: false
+              sortKey: -1779555007412
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.1.0
+                id: pair_25fab6d71a2c43b9be1b759eb32c8728
+            authentication:
+              type: none
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+  - url: https://solarmetrics-api.azurewebsites.net/auth/token
+    name: Auth
+    meta:
+      id: req_47d6903560024482be79db1a9c31ba6a
+      created: 1779550086359
+      modified: 1779550336621
+      isPrivate: false
+      sortKey: -1774203112998
+    method: POST
+    headers:
+      - name: User-Agent
+        value: insomnia/11.1.0
+    authentication:
+      type: none
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_4b19bfd391144a0c87c5f43366647699
+    created: 1779550086328
+    modified: 1779550086328
+  cookies:
+    - key: JSESSIONID
+      value: 8209D1A9BE43DD8B2C9D06058FD7BBEC
+      domain: localhost
+      path: /
+      httpOnly: true
+      hostOnly: true
+      creation: 2025-10-29T11:33:39.848Z
+      lastAccessed: 2026-04-12T20:26:13.068Z
+      id: 9b9db78b-69f5-4cfa-9902-df3f993c15b9
+    - key: __cf_bm
+      value: tnBM6bu9OAe4icCKl86qBnnnBc9j2c33KdBXYFC_ZCo-1779541657.8809776-1.0.1.1-HY33LLgOGYrCOw76U53khygp8m1rvJQJfQnuQHny4.DI2EgnZblu9Lgsp5L.fnEXZTmIdNl2kbyssoO0SAl9GwsG8aRiKA4iD9MerFclX7HiEWmcFG8wjuKdCgkukwcR
+      domain: godapply.com
+      path: /
+      secure: true
+      httpOnly: true
+      hostOnly: false
+      creation: 2026-05-23T13:11:34.784Z
+      lastAccessed: 2026-05-23T13:11:34.784Z
+      sameSite: none
+      id: c42c9388-0717-47b6-b026-c40f5707b254
+    - key: _cfuvid
+      value: 7ORlIP_.naxG4bDlEaBeJjtzJwohR._D9PUQY4_ACiU-1779541657.8809776-1.0.1.1-YKNeYUM4zyQ6WuoxZ65Y_H2mWnfcki2fC_bPbkM50I0
+      domain: godapply.com
+      path: /
+      secure: true
+      httpOnly: true
+      hostOnly: false
+      creation: 2026-05-23T13:11:34.787Z
+      lastAccessed: 2026-05-23T13:11:34.787Z
+      sameSite: none
+      id: 8675c482-44f0-452d-9061-993c1ef39202
+    - key: ARRAffinity
+      value: b0e2122ffb897ee16ce57fb431e00849d09afc37d8c8c169bf990b442f30c685
+      domain: solarmetrics-api.azurewebsites.net
+      path: /
+      secure: true
+      httpOnly: true
+      hostOnly: false
+      creation: 2026-05-23T14:05:30.599Z
+      lastAccessed: 2026-05-23T14:05:30.599Z
+      id: d5e2593b-85e4-416d-b3f5-fd0817661e29
+    - key: ARRAffinitySameSite
+      value: b0e2122ffb897ee16ce57fb431e00849d09afc37d8c8c169bf990b442f30c685
+      domain: solarmetrics-api.azurewebsites.net
+      path: /
+      secure: true
+      httpOnly: true
+      hostOnly: false
+      creation: 2026-05-23T14:05:30.600Z
+      lastAccessed: 2026-05-23T14:05:30.600Z
+      sameSite: none
+      id: 71ab814b-5153-45da-9779-c593df67ea33
+environments:
+  name: Base Environment
+  meta:
+    id: env_0d2674498632413893fbff94dfdf1cfa
+    created: 1779550086327
+    modified: 1779550086327
+    isPrivate: false
